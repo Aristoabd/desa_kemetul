@@ -1,0 +1,243 @@
+/* --- PALET WARNA MINIMALIS --- */
+:root {
+    --bg-color: #F9F8F6;      /* Cream Mewah */
+    --text-dark: #1A3C34;     /* Hijau Sangat Gelap */
+    --text-grey: #6e6e6e;     /* Abu-abu teks */
+    --accent-gold: #B08D55;   /* Emas Pudar */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container-small { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+/* --- HERO MINIMALIS --- */
+.hero-minimalist {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.tagline {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-minimalist h1 {
+    font-family: var(--font-serif);
+    font-size: 4rem; 
+    font-weight: 400; 
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 1px;
+    height: 60px;
+    background-color: var(--text-dark);
+    margin: 0 auto 30px auto;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: var(--text-grey);
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+/* --- HERO GALLERY (GRID FOTO) --- */
+.hero-gallery {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Kiri kecil, Tengah besar, Kanan kecil */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 450px; /* Tinggi total galeri */
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+}
+
+/* Foto Kiri (Portrait) */
+.item-1 {
+    margin-top: 40px; /* Sedikit turun biar estetik */
+}
+
+/* Foto Kanan (Portrait) */
+.item-3 {
+    margin-top: 40px; /* Sedikit turun biar estetik */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9) brightness(0.95); /* Sedikit redup & retro */
+    transition: transform 1s ease;
+}
+
+.gallery-item:hover .hero-img {
+    transform: scale(1.05); /* Zoom in pelan saat hover */
+    filter: saturate(1.1) brightness(1);
+}
+
+/* --- NARRATIVE SECTION --- */
+.narrative-section {
+    padding: 100px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.narrative-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+}
+
+.narrative-title h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--text-dark);
+}
+
+.narrative-content p {
+    margin-bottom: 20px;
+    color: var(--text-grey);
+    font-size: 1.1rem;
+}
+
+/* --- EXPERIENCE LIST --- */
+.experience-section {
+    padding: 80px 0;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+    color: var(--accent-gold);
+}
+
+.experience-list {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.experience-item:hover {
+    padding-left: 20px;
+    background-color: #fff;
+}
+
+.exp-number {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    width: 60px;
+}
+
+.exp-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.exp-info p {
+    font-size: 0.9rem;
+    color: var(--text-grey);
+    margin: 0;
+}
+
+.exp-info {
+    flex-grow: 1;
+}
+
+.exp-arrow {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.experience-item:hover .exp-arrow {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+/* --- SIMPLE CTA --- */
+.simple-cta {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #EAE8E4;
+}
+
+.simple-cta p {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.link-underline {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--text-dark);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.link-underline:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+    .hero-minimalist h1 { font-size: 2.5rem; }
+    
+    /* Di HP, galeri jadi tumpuk ke bawah */
+    .hero-gallery { 
+        display: flex; 
+        flex-direction: column; 
+        height: auto; 
+    }
+    
+    .item-1, .item-3 { margin-top: 0; }
+    .gallery-item { height: 250px; width: 100%; }
+    
+    .narrative-grid { grid-template-columns: 1fr; gap: 20px; }
+    .narrative-title h2 { font-size: 2.5rem; margin-bottom: 20px; }
+}

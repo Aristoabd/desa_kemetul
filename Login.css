@@ -1,0 +1,272 @@
+/* --- PALET WARNA & FONT --- */
+:root {
+    --bg-color: #F9F8F6;
+    --text-dark: #1A3C34;
+    --text-grey: #6e6e6e;
+    --accent-gold: #B08D55;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- AUTH LAYOUT (Login/Register) --- */
+.auth-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/sawah.jpg'); /* Pastikan gambar ini ada */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* Overlay Gelap di atas background */
+.auth-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(26, 60, 52, 0.6); /* Hijau gelap transparan */
+    backdrop-filter: blur(5px); /* Efek blur background */
+    z-index: 1;
+}
+
+/* Kartu Glassmorphism */
+.auth-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    color: var(--text-grey);
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+}
+
+/* --- FORM STYLES (Minimalist) --- */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-grey);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Input Garis Bawah */
+.form-input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input:focus {
+    border-bottom-color: var(--accent-gold);
+}
+
+/* Tombol */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--text-dark);
+    color: white;
+    border: none;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-gold);
+}
+
+.auth-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-grey);
+}
+
+.auth-footer a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.auth-footer a:hover {
+    border-bottom-color: var(--text-dark);
+}
+
+/* --- PROFILE PAGE STYLES --- */
+.profile-section {
+    padding: 120px 20px 60px; /* Padding atas besar karena header fixed/transparan */
+    background-color: var(--bg-color);
+    min-height: 80vh;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.profile-header h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* --- TOMBOL AKSI PROFILE (MODERN UI) --- */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    /* 'flex-end' meratakan tombol ke kanan */
+    justify-content: flex-end; 
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee; /* Garis pemisah tipis */
+}
+
+/* 1. Tombol Hapus Akun (Posisi Kiri - Danger) */
+.btn-delete {
+    /* 'margin-right: auto' adalah trik untuk mendorong tombol ini mentok ke kiri */
+    margin-right: auto; 
+    color: #ff6b6b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+    opacity: 0.8;
+    padding: 10px 0; /* Area klik sedikit diperbesar */
+}
+
+.btn-delete:hover {
+    opacity: 1;
+    color: #d32f2f; /* Merah lebih gelap saat hover */
+    text-decoration: underline;
+}
+
+/* 2. Tombol Logout (Posisi Tengah - Secondary) */
+.btn-logout {
+    background-color: transparent;
+    color: var(--text-grey);
+    border: 1px solid #ccc;
+    padding: 12px 30px;
+    border-radius: 50px; /* Bentuk bulat/pil */
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    border-color: var(--text-dark);
+    color: var(--text-dark);
+    background-color: rgba(0,0,0,0.02);
+}
+
+/* 3. Tombol Simpan (Posisi Kanan - Primary) */
+.btn-update {
+    background-color: var(--text-dark);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px; /* Bentuk bulat/pil */
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-update:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px); /* Efek tombol naik sedikit */
+    box-shadow: 0 6px 20px rgba(176, 141, 85, 0.3);
+}
+
+/* --- RESPONSIVE (Tampilan HP) --- */
+@media (max-width: 768px) {
+    .action-buttons {
+        /* column-reverse membalik urutan: Tombol Simpan jadi paling ATAS */
+        flex-direction: column-reverse; 
+        gap: 15px;
+        align-items: stretch; /* Tombol jadi lebar penuh */
+    }
+
+    .btn-delete {
+        margin-right: 0;
+        text-align: center;
+        margin-top: 10px; /* Jarak ekstra untuk tombol hapus */
+    }
+    
+    .btn-logout, .btn-update {
+        width: 100%;
+        text-align: center;
+    }
+}
+.btn-delete:hover { text-decoration: underline; }
+
+/* Utilities */
+.u-clearfix::after { content: ""; clear: both; display: table; }

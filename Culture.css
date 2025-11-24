@@ -1,0 +1,146 @@
+/* --- PALET WARNA --- */
+:root {
+    --bg-color: #F9F8F6;
+    --text-dark: #1A3C34;
+    --text-body: #2c2c2c;
+    --accent-gold: #B08D55;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'DM Sans', sans-serif;
+    --font-reading: 'Lora', serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Reset Khusus untuk Body ini agar tidak hancur */
+body.u-body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Utilities */
+.container-small { max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center; }
+.container-medium { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.container-text { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+/* --- 1. ARTICLE HEADER --- */
+.article-header {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.category-tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.article-header h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.meta-info {
+    font-family: var(--font-sans);
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.meta-info .dot { margin: 0 10px; }
+
+/* --- 2. FEATURED IMAGE --- */
+.featured-image-section {
+    padding-bottom: 60px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.img-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 15px;
+    font-style: italic;
+    font-family: var(--font-serif);
+}
+
+/* --- 3. ARTICLE CONTENT --- */
+.article-content {
+    padding-bottom: 100px;
+    background-color: var(--bg-color);
+}
+
+.article-content p {
+    font-family: var(--font-reading);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.article-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Drop Cap */
+.drop-cap::first-letter {
+    float: left;
+    font-family: var(--font-serif);
+    font-size: 5.5rem;
+    line-height: 0.8;
+    font-weight: 400;
+    margin-right: 15px;
+    color: var(--text-dark);
+    padding-top: 5px;
+}
+
+/* Quote Box */
+.quote-box {
+    margin: 40px 0;
+    padding: 30px 40px;
+    border-left: 4px solid var(--accent-gold);
+    background-color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .article-header h1 { font-size: 2.2rem; }
+    .quote-box { padding: 20px; font-size: 1.2rem; }
+    .container-text { padding: 0 20px; }
+}

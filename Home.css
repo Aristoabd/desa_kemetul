@@ -1,0 +1,328 @@
+/* --- PALET WARNA --- */
+:root {
+    --bg-color: #F9F8F6;
+    --text-dark: #1A3C34;
+    --text-grey: #6e6e6e;
+    --accent-gold: #B08D55;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body.u-body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container-small { max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center; }
+
+/* --- 1. CINEMATIC HERO --- */
+.home-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-attachment: fixed; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    max-width: 800px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.home-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+
+.home-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: white;
+    color: var(--text-dark);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 2. INTRO (ELEGANT FRAME DESIGN) --- */
+.intro-section {
+    padding: 120px 0;
+    position: relative;
+    /* Background Gambar Sawah tapi samar (Parallax) */
+    background-image: url('images/siram.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Lapisan Putih Transparan di atas background */
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(249, 248, 246, 0.92); /* Cream Opacity 92% */
+    z-index: 1;
+}
+
+.intro-section .container-small {
+    position: relative;
+    z-index: 2;
+}
+
+/* Frame/Bingkai Emas */
+.intro-frame {
+    border: 1px solid var(--accent-gold);
+    padding: 60px 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Kaca tipis */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.intro-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.divider-gold {
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-gold);
+    margin: 0 auto 30px;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    color: var(--text-grey);
+    line-height: 1.8;
+}
+
+/* --- 3. DESTINATIONS (GRID) --- */
+.destinations-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h3 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.section-header p {
+    color: var(--accent-gold);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.dest-card {
+    background: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.dest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.dest-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.dest-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.dest-card:hover .dest-img img {
+    transform: scale(1.1);
+}
+
+.dest-info {
+    padding: 25px;
+}
+
+.dest-info h4 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+    color: var(--text-dark);
+}
+
+.dest-info p {
+    font-size: 0.95rem;
+    color: var(--text-grey);
+    margin: 0;
+}
+
+/* --- 4. TEASERS (SPLIT LAYOUT) --- */
+.teaser-section {
+    padding: 100px 0;
+}
+
+.bg-cream {
+    background-color: var(--bg-color);
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.image-side img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 20px 20px 0px rgba(176, 141, 85, 0.15);
+}
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.text-side h3 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.text-side p {
+    color: var(--text-grey);
+    margin-bottom: 30px;
+}
+
+.link-arrow {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    border-bottom: 1px solid var(--text-dark);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.link-arrow:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+/* --- 5. LOCATION --- */
+.location-section {
+    padding: 80px 0 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.location-section h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.map-wrapper {
+    margin-top: 50px;
+    filter: grayscale(100%) contrast(1.1);
+    transition: 0.5s;
+}
+
+.map-wrapper:hover {
+    filter: grayscale(0%);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+    .home-hero h1 { font-size: 3rem; }
+    .intro-frame { padding: 40px 20px; }
+    .split-layout { grid-template-columns: 1fr; gap: 40px; }
+    .split-layout.reverse .image-side { order: -1; }
+    .image-side img { height: 300px; }
+}

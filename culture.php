@@ -43,7 +43,7 @@ include 'koneksi.php';
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.php" style="color: #1a3c34;">About</a></li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.php" style="color: #1a3c34;">Contact</a></li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home-Industry.php" style="color: #1a3c34;">Home Industry</a></li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Culture.php" style="color: #1a3c34;">Berita</a></li>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Culture.php" style="color: #1a3c34;">Culture</a></li>
                     </ul>
                 </div>
                 <div class="u-custom-menu u-nav-container-collapse">

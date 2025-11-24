@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="about.php" style="color: #1a3c34;">About</a></li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="contact.php" style="color: #1a3c34;">Contact</a></li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="home-industry.php" style="color: #1a3c34;">Home Industry</a></li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="culture.php" style="color: #1a3c34;">Berita</a></li>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="culture.php" style="color: #1a3c34;">Culture</a></li>
                     </ul>
                 </div>
                 <div class="u-custom-menu u-nav-container-collapse">

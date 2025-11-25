@@ -1,4 +1,3 @@
-/* --- PALET WARNA --- */
 :root {
     --bg-color: #F9F8F6;
     --text-dark: #1A3C34;
@@ -11,7 +10,6 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Reset Khusus untuk Body ini agar tidak hancur */
 body.u-body {
     background-color: var(--bg-color) !important;
     color: var(--text-dark);
@@ -20,12 +18,10 @@ body.u-body {
     margin: 0;
 }
 
-/* Utilities */
 .container-small { max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center; }
 .container-medium { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 .container-text { max-width: 740px; margin: 0 auto; padding: 0 20px; }
 
-/* --- 1. ARTICLE HEADER --- */
 .article-header {
     padding-top: 80px;
     padding-bottom: 40px;
@@ -61,7 +57,6 @@ body.u-body {
 
 .meta-info .dot { margin: 0 10px; }
 
-/* --- 2. FEATURED IMAGE --- */
 .featured-image-section {
     padding-bottom: 60px;
     background-color: var(--bg-color);
@@ -88,7 +83,6 @@ body.u-body {
     font-family: var(--font-serif);
 }
 
-/* --- 3. ARTICLE CONTENT --- */
 .article-content {
     padding-bottom: 100px;
     background-color: var(--bg-color);
@@ -112,7 +106,6 @@ body.u-body {
     font-weight: 600;
 }
 
-/* Drop Cap */
 .drop-cap::first-letter {
     float: left;
     font-family: var(--font-serif);
@@ -124,7 +117,6 @@ body.u-body {
     padding-top: 5px;
 }
 
-/* Quote Box */
 .quote-box {
     margin: 40px 0;
     padding: 30px 40px;
@@ -138,7 +130,6 @@ body.u-body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .article-header h1 { font-size: 2.2rem; }
     .quote-box { padding: 20px; font-size: 1.2rem; }

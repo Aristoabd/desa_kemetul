@@ -1,9 +1,8 @@
-/* --- PALET WARNA MINIMALIS --- */
 :root {
-    --bg-color: #F9F8F6;      /* Cream Mewah */
-    --text-dark: #1A3C34;     /* Hijau Sangat Gelap */
-    --text-grey: #6e6e6e;     /* Abu-abu teks */
-    --accent-gold: #B08D55;   /* Emas Pudar */
+    --bg-color: #F9F8F6;      
+    --text-dark: #1A3C34;     
+    --text-grey: #6e6e6e;     
+    --accent-gold: #B08D55;   
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'DM Sans', sans-serif;
 }
@@ -18,11 +17,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Utilities */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .container-small { max-width: 800px; margin: 0 auto; padding: 0 20px; }
 
-/* --- HERO MINIMALIS --- */
 .hero-minimalist {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -62,15 +59,14 @@ body {
     margin: 0 auto 60px auto;
 }
 
-/* --- HERO GALLERY (GRID FOTO) --- */
 .hero-gallery {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Kiri kecil, Tengah besar, Kanan kecil */
+    grid-template-columns: 1fr 2fr 1fr; 
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 450px; /* Tinggi total galeri */
+    height: 450px; 
 }
 
 .gallery-item {
@@ -79,30 +75,27 @@ body {
     border-radius: 4px;
 }
 
-/* Foto Kiri (Portrait) */
 .item-1 {
-    margin-top: 40px; /* Sedikit turun biar estetik */
+    margin-top: 40px;
 }
 
-/* Foto Kanan (Portrait) */
 .item-3 {
-    margin-top: 40px; /* Sedikit turun biar estetik */
+    margin-top: 40px; 
 }
 
 .hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(0.9) brightness(0.95); /* Sedikit redup & retro */
+    filter: saturate(0.9) brightness(0.95); 
     transition: transform 1s ease;
 }
 
 .gallery-item:hover .hero-img {
-    transform: scale(1.05); /* Zoom in pelan saat hover */
+    transform: scale(1.05); 
     filter: saturate(1.1) brightness(1);
 }
 
-/* --- NARRATIVE SECTION --- */
 .narrative-section {
     padding: 100px 0;
     border-top: 1px solid rgba(0,0,0,0.05);
@@ -127,7 +120,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* --- EXPERIENCE LIST --- */
 .experience-section {
     padding: 80px 0;
 }
@@ -194,7 +186,6 @@ body {
     transform: translateX(10px);
 }
 
-/* --- SIMPLE CTA --- */
 .simple-cta {
     text-align: center;
     padding: 100px 0;
@@ -224,11 +215,9 @@ body {
     border-color: var(--accent-gold);
 }
 
-/* RESPONSIVE (HP) */
 @media (max-width: 768px) {
     .hero-minimalist h1 { font-size: 2.5rem; }
     
-    /* Di HP, galeri jadi tumpuk ke bawah */
     .hero-gallery { 
         display: flex; 
         flex-direction: column; 
